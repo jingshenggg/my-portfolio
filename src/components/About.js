@@ -16,7 +16,7 @@ function About() {
                 className="icon"
               />
               <h3>Experience</h3>
-              <p>2 years <br /> Software Development & Data Engineering</p>
+              <p>More than 2 years <br /> Software Development & Data Engineering</p>
             </div>
             <div className="details-container">
               <img
@@ -26,17 +26,18 @@ function About() {
               />
               <h3>Education</h3>
               <p>
-                Bachelors in Electrical & Electronic Engineering <br />
+                Nanyang Technological University <br />
+                Bachelor of Engineering (Electrical & Electronic Engineering) <br />
+                with Honours (Distinction) <br />
                 Specialization: Computer Engineering
               </p>
             </div>
           </div>
           <div className="text-container">
             <p>
-              I am a Data Engineer passionate about building robust ETL
-              pipelines and scalable data systems. My work involves Python,
-              SQL, Spark, and Databricks to design workflows that turn raw data
-              into actionable insights.
+              Welcome to my profile! I graduated from Nanyang Technological University (NTU) with a degree in Electrical & Electronic Engineering, specializing in Computer Engineering. This gave me a strong foundation in both software development and system-level problem solving.
+              I began my career as a Full Stack Developer, gaining hands-on experience in building end-to-end applications. Over time, I discovered a deeper passion for data, which led me to specialize as a Data Engineer.
+              Today, I focus on designing and building robust ETL pipelines and scalable data systems. My experience spans working with Python, SQL, Spark, Databricks, Hadoop, and Hive to transform raw data into actionable insights.
             </p>
           </div>
         </div>
