@@ -1,5 +1,8 @@
 import React from "react";
 import "./About.css";
+import ExperienceIcon from "../assets/experience.png";
+import EducationIcon from "../assets/education.png";
+
 
 function About() {
   return (
@@ -11,7 +14,7 @@ function About() {
           <div className="about-containers">
             <div className="details-container">
               <img
-                src="/assets/experience.png"
+                src={ExperienceIcon}
                 alt="Experience icon"
                 className="icon"
               />
@@ -20,13 +23,13 @@ function About() {
             </div>
             <div className="details-container">
               <img
-                src="/assets/education.png"
+                src={EducationIcon}
                 alt="Education icon"
                 className="icon"
               />
               <h3>Education</h3>
               <p>
-                Nanyang Technological University <br />
+                Nanyang Technological University 2019 - 2023 <br />
                 Bachelor of Engineering (Electrical & Electronic Engineering) <br />
                 with Honours (Distinction) <br />
                 Specialization: Computer Engineering
