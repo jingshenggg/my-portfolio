@@ -64,30 +64,14 @@
   border-radius: 2rem;
 }
 
-.btn-color-1,
-.btn-color-2 {
+.btn-color-1 {
   border: rgb(53, 53, 53) 0.1rem solid;
-}
-
-.btn-color-1:hover,
-.btn-color-2:hover {
-  cursor: pointer;
-}
-
-.btn-color-1,
-.btn-color-2:hover {
-  background: rgb(53, 53, 53);
-  color: white;
-}
-
-.btn-color-1:hover {
-  background: rgb(0, 0, 0);
-}
-
-.btn-color-2 {
   background: none;
 }
 
-.btn-color-2:hover {
-  border: rgb(255, 255, 255) 0.1rem solid;
+.btn-color-1:hover {
+  background: rgb(53, 53, 53);
+  color: white;
+  cursor: pointer;
+  border: rgb(255, 255, 255) 0.1rem solid
 }

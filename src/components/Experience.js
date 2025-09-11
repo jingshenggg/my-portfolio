@@ -5,8 +5,8 @@ function Experience() {
   const experiences = [
     {
       role: "Data Engineer",
-      company: "ABC AutoEver",
-      period: "2023 – Present",
+      company: "Azendian Solutions",
+      period: "2024 – 2025",
       description: [
         "Designed and implemented ETL pipelines for large-scale data processing",
         "Worked with Python, SQL, Spark, Databricks, Hadoop, and Hive",
@@ -14,13 +14,23 @@ function Experience() {
       ],
     },
     {
-      role: "Full Stack Developer",
-      company: "XYZ Solutions",
-      period: "2021 – 2023",
+      role: "Software Engineer Full-Stack Web",
+      company: "Anacle Systems",
+      period: "2023 – 2024",
       description: [
         "Built and deployed web applications using React, Node.js, and PostgreSQL",
         "Collaborated with cross-functional teams to deliver end-to-end solutions",
         "Introduced CI/CD practices for faster releases",
+      ],
+    },
+    {
+      role: "Part-time IT Assistant",
+      company: "NTU Asian School of the Environment",
+      period: "2020 – 2023",
+      description: [
+        "Helped repair hard drives and troubleshoot software issues",
+        "Assisted in setting up and maintaining computer for Professors",
+        "Executed data entry and administrative tasks",
       ],
     },
   ];
@@ -34,8 +44,7 @@ function Experience() {
           <div key={index} className="timeline-item">
             <div className="timeline-dot"></div>
             <div className="timeline-content">
-              <h2>{role}</h2>
-              <h3>{company}</h3>
+              <h3>{company} ({role})</h3>
               <span className="period">{period}</span>
               <ul>
                 {description.map((item, i) => (

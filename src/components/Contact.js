@@ -2,6 +2,7 @@ import React from "react";
 import "./Contact.css";
 import EmailIcon from "../assets/email.png";
 import LinkedInIcon from "../assets/linkedin.png";
+import YoutubeIcon from "../assets/youtube.png";
 
 function Contact() {
   return (
@@ -27,6 +28,16 @@ function Contact() {
           />
           <p>
             <a href="https://www.linkedin.com/in/jingshenggg/">LinkedIn</a>
+          </p>
+        </div>
+        <div className="contact-info-container">
+          <img
+            src={YoutubeIcon}
+            alt="Youtube"
+            className="icon contact-icon"
+          />
+          <p>
+            <a href="https://www.youtube.com/@hellothisisjs">Mr. JS</a>
           </p>
         </div>
       </div>

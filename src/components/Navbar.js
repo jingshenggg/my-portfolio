@@ -30,6 +30,7 @@ function Navbar() {
           <div className={`menu-links ${isOpen ? "open" : ""}`}>
             <li><a href="#about" onClick={toggleMenu}>About</a></li>
             <li><a href="#experience" onClick={toggleMenu}>Experience</a></li>
+            <li><a href="#sidehustles" onClick={toggleMenu}>Side Hustles</a></li>
             <li><a href="#contact" onClick={toggleMenu}>Contact</a></li>
           </div>
         </div>

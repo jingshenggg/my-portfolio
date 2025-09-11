@@ -3,6 +3,7 @@ import "./Profile.css";
 import ProfilePic from "../assets/profile-pic.jpg";
 import LinkedInIcon from "../assets/linkedin.png";
 import GitHubIcon from "../assets/github.png";
+import YoutubeIcon from "../assets/youtube.png";
 
 function Profile() {
   return (
@@ -11,15 +12,21 @@ function Profile() {
         <img src={ProfilePic} alt="Jing Sheng profile" />
       </div>
       <div className="section__text">
-        <p className="section__text__p1">Hello, I'm</p>
+        <p className="section__text__p1">Hello, I am</p>
         <h1 className="title">Jing Sheng</h1>
-        <p className="section__text__p2">Data Engineer</p>
+        <p className="section__text__p2">Welcome to my profile 😄</p>
         <div className="btn-container">
           <button
-            className="btn btn-color-2"
-            onClick={() => window.open("/assets/resume.pdf")}
+            className="btn btn-color-1"
+            onClick={() => window.location.href="#experience"}
           >
-            Download CV
+            Work Experience
+          </button>
+          <button
+            className="btn btn-color-1"
+            onClick={() => window.location.href="#experience"}
+          >
+            Side Hustles
           </button>
           <button
             className="btn btn-color-1"
@@ -43,6 +50,14 @@ function Profile() {
             className="icon"
             onClick={() =>
               window.open("https://github.com/jingshenggg", "_blank")
+            }
+          />
+          <img
+            src={YoutubeIcon}
+            alt="Youtube"
+            className="icon"
+            onClick={() =>
+              window.open("https://www.youtube.com/@hellothisisjs", "_blank")
             }
           />
         </div>
