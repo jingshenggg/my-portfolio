@@ -5,7 +5,7 @@ function Experience() {
   const experiences = [
     {
       role: "Data Engineer",
-      company: "Hyundai AutoEver",
+      company: "ABC AutoEver",
       period: "2023 – Present",
       description: [
         "Designed and implemented ETL pipelines for large-scale data processing",
