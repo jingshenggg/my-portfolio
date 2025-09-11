@@ -1,11 +1,14 @@
 import React from "react";
 import "./Profile.css";
+import ProfilePic from "../assets/profile-pic.jpg";
+import LinkedInIcon from "../assets/linkedin.png";
+import GitHubIcon from "../assets/github.png";
 
 function Profile() {
   return (
     <section id="profile">
       <div className="section__pic-container">
-        <img src="/assets/profile-pic.jpg" alt="Jing Sheng profile" />
+        <img src={ProfilePic} alt="Jing Sheng profile" />
       </div>
       <div className="section__text">
         <p className="section__text__p1">Hello, I'm</p>
@@ -27,7 +30,7 @@ function Profile() {
         </div>
         <div id="socials-container">
           <img
-            src="/assets/linkedin.png"
+            src={LinkedInIcon}
             alt="LinkedIn"
             className="icon"
             onClick={() =>
@@ -35,7 +38,7 @@ function Profile() {
             }
           />
           <img
-            src="/assets/github.png"
+            src={GitHubIcon}
             alt="GitHub"
             className="icon"
             onClick={() =>
