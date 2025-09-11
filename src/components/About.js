@@ -42,12 +42,6 @@ function About() {
           </div>
         </div>
       </div>
-      <img
-        src="/assets/arrow.png"
-        alt="Arrow"
-        className="icon arrow"
-        onClick={() => (window.location.href = "#experience")}
-      />
     </section>
   );
 }

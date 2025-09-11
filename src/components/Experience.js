@@ -2,65 +2,50 @@ import React from "react";
 import "./Experience.css";
 
 function Experience() {
+  const experiences = [
+    {
+      role: "Data Engineer",
+      company: "Hyundai AutoEver",
+      period: "2023 – Present",
+      description: [
+        "Designed and implemented ETL pipelines for large-scale data processing",
+        "Worked with Python, SQL, Spark, Databricks, Hadoop, and Hive",
+        "Maintained and optimized API services on Hadoop clusters",
+      ],
+    },
+    {
+      role: "Full Stack Developer",
+      company: "XYZ Solutions",
+      period: "2021 – 2023",
+      description: [
+        "Built and deployed web applications using React, Node.js, and PostgreSQL",
+        "Collaborated with cross-functional teams to deliver end-to-end solutions",
+        "Introduced CI/CD practices for faster releases",
+      ],
+    },
+  ];
+
   return (
     <section id="experience">
       <p className="section__text__p1">Explore My</p>
-      <h1 className="title">Experience</h1>
-      <div className="experience-details-container">
-        <div className="about-containers">
-          {/* Frontend Skills */}
-          <div className="details-container">
-            <h2 className="experience-sub-title">Frontend Development</h2>
-            <div className="article-container">
-              {[
-                { skill: "HTML", level: "Experienced" },
-                { skill: "CSS", level: "Experienced" },
-                { skill: "C# (.NET)", level: "Intermediate" },
-                { skill: "JavaScript", level: "Basic" },
-                { skill: "Python", level: "Intermediate" },
-                { skill: "Material UI", level: "Intermediate" },
-              ].map(({ skill, level }) => (
-                <article key={skill}>
-                  <img src="/assets/checkmark.png" alt="Checkmark" className="icon" />
-                  <div>
-                    <h3>{skill}</h3>
-                    <p>{level}</p>
-                  </div>
-                </article>
-              ))}
+      <h1 className="title">Work Experience</h1>
+      <div className="timeline-container">
+        {experiences.map(({ role, company, period, description }, index) => (
+          <div key={index} className="timeline-item">
+            <div className="timeline-dot"></div>
+            <div className="timeline-content">
+              <h2>{role}</h2>
+              <h3>{company}</h3>
+              <span className="period">{period}</span>
+              <ul>
+                {description.map((item, i) => (
+                  <li key={i}>{item}</li>
+                ))}
+              </ul>
             </div>
           </div>
-
-          {/* Backend Skills */}
-          <div className="details-container">
-            <h2 className="experience-sub-title">Backend & Databases</h2>
-            <div className="article-container">
-              {[
-                { skill: "PostgreSQL", level: "Basic" },
-                { skill: "Node.js", level: "Intermediate" },
-                { skill: "Express.js", level: "Intermediate" },
-                { skill: "Git", level: "Intermediate" },
-                { skill: "MySQL", level: "Intermediate" },
-                { skill: "MSSQL", level: "Intermediate" },
-              ].map(({ skill, level }) => (
-                <article key={skill}>
-                  <img src="/assets/checkmark.png" alt="Checkmark" className="icon" />
-                  <div>
-                    <h3>{skill}</h3>
-                    <p>{level}</p>
-                  </div>
-                </article>
-              ))}
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
-      <img
-        src="/assets/arrow.png"
-        alt="Arrow"
-        className="icon arrow"
-        onClick={() => (window.location.href = "#projects")}
-      />
     </section>
   );
 }
