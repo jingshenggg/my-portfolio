@@ -5,6 +5,14 @@ function Experience() {
   const experiences = [
     {
       role: "Data Engineer",
+      company: "Hyundai Motor Group Innovation Center Singapore",
+      period: "2025 – Present",
+      description: [
+        "Developed scripts to run in Hadoop to monitor API health.",
+      ],
+    },
+    {
+      role: "Data Engineer",
       company: "Azendian Solutions",
       period: "2024 – 2025",
       description: [
