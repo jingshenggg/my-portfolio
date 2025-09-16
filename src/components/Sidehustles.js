@@ -7,22 +7,30 @@ function Sidehustles() {
       role: "Content Creator",
       company: "YouTube Channel",
       period: "2025 - Present",
-      description: [
-        "Created travel vlogs.",
-      ],
-      videos: [
-        "qA4seXB4Exw",
-        "nP1D96R2XGk",
+      projects: [
+        {
+          title: "Travel Vlogs",
+          description: ["Created travel vlogs."],
+          videos: ["qA4seXB4Exw", "nP1D96R2XGk"],
+        },
+        {
+          title: "Piano Journey",
+          description: ["Self-learned piano journey"],
+          videos: ["hMMxk2U0OqU", "lyyz1FUgk_c"],
+        },
       ],
     },
     {
       role: "Freelancer",
       company: "Shopee",
       period: "2025 - Present",
-      description: [
-        "Set up online store.",
+      projects: [
+        {
+          title: "Online Store",
+          description: ["Set up online store."],
+          videos: [],
+        },
       ],
-      videos: [],
     },
   ];
 
@@ -31,38 +39,43 @@ function Sidehustles() {
       <p className="section__text__p1">Sharing My</p>
       <h1 className="title">Side Hustles</h1>
       <div className="timeline-container">
-        {experiences.map(({ role, company, period, description, videos }, index) => (
+        {experiences.map(({ role, company, period, projects }, index) => (
           <div key={index} className="timeline-item">
             <div className="timeline-dot"></div>
             <div className="timeline-content">
               <h3>{company} ({role})</h3>
               <span className="period">{period}</span>
-              <ul>
-                {description.map((item, i) => (
-                  <li key={i}>{item}</li>
-                ))}
-              </ul>
 
-              {/* YouTube videos embed */}
-              {videos && videos.length > 0 && (
-                <div className="video-container">
-                  {videos.map((videoId, i) => (
-                    <iframe
-                    key={i}
-                    width="640"
-                    height="360"
-                    src={`https://www.youtube.com/embed/${videoId}`}
-                    title={`YouTube video player ${i}`}
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    ></iframe>
-                  ))}
+              {projects.map((proj, i) => (
+                <div key={i} className="project-block">
+                  <h4>{proj.title}</h4>
+                  <ul>
+                    {proj.description.map((item, j) => (
+                      <li key={j}>{item}</li>
+                    ))}
+                  </ul>
+
+                  {proj.videos.length > 0 && (
+                    <div className="video-container">
+                      {proj.videos.map((videoId, k) => (
+                        <iframe
+                          key={k}
+                          width="640"
+                          height="360"
+                          src={`https://www.youtube.com/embed/${videoId}`}
+                          title={`YouTube video ${k}`}
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                        ></iframe>
+                      ))}
+                    </div>
+                  )}
                 </div>
-              )}
+              ))}
             </div>
           </div>
         ))}
+
       </div>
     </section>
   );

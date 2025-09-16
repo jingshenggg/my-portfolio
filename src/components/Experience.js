@@ -63,11 +63,11 @@ function Experience() {
             <div className="timeline-content">
               <h3>{company} ({role})</h3>
               <span className="period">{period}</span>
-              <ul>
+              {/* <ul>
                 {description.map((item, i) => (
                   <li key={i}>{item}</li>
                 ))}
-              </ul>
+              </ul> */}
             </div>
           </div>
         ))}
