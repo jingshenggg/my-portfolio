@@ -27,6 +27,7 @@ function Navbar() {
             <span></span>
             <span></span>
             <span></span>
+            <span></span>
           </div>
           <div className={`menu-links ${isOpen ? "open" : ""}`}>
             <li><a href="#about" onClick={toggleMenu}>About</a></li>

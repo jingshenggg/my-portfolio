@@ -2,7 +2,7 @@ import React from "react";
 import "./Sidehustles.css";
 
 function Sidehustles() {
-  const experiences = [
+  const sidehustles = [
     {
       role: "Content Creator",
       company: "YouTube Channel",
@@ -35,11 +35,11 @@ function Sidehustles() {
   ];
 
   return (
-    <section id="experience">
+    <section id="sidehustles">
       <p className="section__text__p1">Sharing My</p>
       <h1 className="title">Side Hustles</h1>
       <div className="timeline-container">
-        {experiences.map(({ role, company, period, projects }, index) => (
+        {sidehustles.map(({ role, company, period, projects }, index) => (
           <div key={index} className="timeline-item">
             <div className="timeline-dot"></div>
             <div className="timeline-content">

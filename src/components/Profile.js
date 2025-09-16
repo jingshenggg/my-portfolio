@@ -24,7 +24,7 @@ function Profile() {
           </button>
           <button
             className="btn btn-color-1"
-            onClick={() => window.location.href="#experience"}
+            onClick={() => window.location.href="#sidehustles"}
           >
             Side Hustles
           </button>

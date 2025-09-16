@@ -1,16 +1,15 @@
-/* EXPERIENCE SECTION */
-#experience {
+#sidehustles {
   position: relative;
 }
 
-.experience-sub-title {
+.sidehustles-sub-title {
   color: rgb(85, 85, 85);
   font-weight: 600;
   font-size: 1.75rem;
   margin-bottom: 2rem;
 }
 
-.experience-details-container {
+.sidehustles-details-container {
   display: flex;
   justify-content: center;
   flex-direction: column;
