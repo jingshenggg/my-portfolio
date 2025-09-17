@@ -4,31 +4,20 @@ import "./Sidehustles.css";
 function Sidehustles() {
   const sidehustles = [
     {
-      role: "Content Creator",
-      company: "YouTube Channel",
+      role: "YouTube Content Creator",
       period: "2025 - Present",
       projects: [
         {
-          title: "Travel Vlogs",
-          description: ["Created travel vlogs."],
+          title: "Mr. JS",
+          url: "https://www.youtube.com/@hellothisisjs", // Replace with your actual channel URL
+          description: ["Travel vlogs"],
           videos: ["qA4seXB4Exw", "nP1D96R2XGk"],
         },
         {
-          title: "Piano Journey",
+          title: "Just Piano Vibes",
+          url: "https://www.youtube.com/@justpianovibes", // Replace with your actual channel URL
           description: ["Self-learned piano journey"],
           videos: ["hMMxk2U0OqU", "lyyz1FUgk_c"],
-        },
-      ],
-    },
-    {
-      role: "Freelancer",
-      company: "Shopee",
-      period: "2025 - Present",
-      projects: [
-        {
-          title: "Online Store",
-          description: ["Set up online store."],
-          videos: [],
         },
       ],
     },
@@ -39,16 +28,24 @@ function Sidehustles() {
       <p className="section__text__p1">Sharing My</p>
       <h1 className="title">Side Hustles</h1>
       <div className="timeline-container">
-        {sidehustles.map(({ role, company, period, projects }, index) => (
+        {sidehustles.map(({ role, period, projects }, index) => (
           <div key={index} className="timeline-item">
             <div className="timeline-dot"></div>
             <div className="timeline-content">
-              <h3>{company} ({role})</h3>
+              <h3>{role}</h3>
               <span className="period">{period}</span>
 
               {projects.map((proj, i) => (
                 <div key={i} className="project-block">
-                  <h4>{proj.title}</h4>
+                  <h4>
+                    <a
+                      href={proj.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {proj.title}
+                    </a>
+                  </h4>
                   <ul>
                     {proj.description.map((item, j) => (
                       <li key={j}>{item}</li>
@@ -75,7 +72,6 @@ function Sidehustles() {
             </div>
           </div>
         ))}
-
       </div>
     </section>
   );
