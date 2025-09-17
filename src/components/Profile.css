@@ -2,8 +2,11 @@
 #profile {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 5rem;
-  height: 80vh;
+  padding: 2rem;
+  height: auto; /* let content decide height */
+  min-height: 80vh;
 }
 
 .section__pic-container {
@@ -11,6 +14,14 @@
   height: 400px;
   width: 400px;
   margin: auto 0;
+  flex-shrink: 0;
+}
+
+.section__pic-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  object-fit: cover;
 }
 
 .section__text {
@@ -53,6 +64,7 @@
 .btn-container {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;   /* allow wrapping */
   gap: 1rem;
 }
 
@@ -73,5 +85,69 @@
   background: rgb(53, 53, 53);
   color: white;
   cursor: pointer;
-  border: rgb(255, 255, 255) 0.1rem solid
+  border: rgb(255, 255, 255) 0.1rem solid;
+}
+
+/* ======================== */
+/* RESPONSIVE DESIGN BELOW  */
+/* ======================== */
+@media (max-width: 1024px) {
+  #profile {
+    gap: 2rem;
+  }
+
+  .section__pic-container {
+    height: 300px;
+    width: 300px;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #profile {
+    flex-direction: column; /* stack image above text */
+    text-align: center;
+    gap: 2rem;
+    padding: 1rem;
+  }
+
+  .section__pic-container {
+    height: 250px;
+    width: 250px;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .section__text__p2 {
+    font-size: 1.25rem;
+  }
+
+  .btn {
+    width: 100%; /* make buttons full width */
+    max-width: 300px;
+  }
+
+  #socials-container {
+    gap: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section__pic-container {
+    height: 200px;
+    width: 200px;
+  }
+
+  .title {
+    font-size: 1.75rem;
+  }
+
+  .section__text__p2 {
+    font-size: 1rem;
+  }
 }

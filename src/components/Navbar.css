@@ -1,4 +1,6 @@
+/* ======================== */
 /* DESKTOP NAV */
+/* ======================== */
 nav,
 .nav-links {
   display: flex;
@@ -37,7 +39,9 @@ a:hover {
   cursor: default;
 }
 
-/* HAMBURGER MENU */
+/* ======================== */
+/* HAMBURGER NAV (hidden by default) */
+/* ======================== */
 #hamburger-nav {
   display: none;
 }
@@ -72,13 +76,15 @@ a:hover {
   max-height: 0;
   overflow: hidden;
   transition: all 0.3s ease-in-out;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
 }
 
 .menu-links a {
   display: block;
-  padding: 10px;
+  padding: 10px 20px;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   color: black;
   text-decoration: none;
   transition: all 0.3s ease-in-out;
@@ -102,4 +108,26 @@ a:hover {
 
 .hamburger-icon.open span:last-child {
   transform: rotate(-45deg) translate(10px, -5px);
+}
+
+/* ======================== */
+/* RESPONSIVE BEHAVIOR */
+/* ======================== */
+@media (max-width: 768px) {
+  #desktop-nav {
+    display: none; /* hide desktop nav */
+  }
+
+  #hamburger-nav {
+    display: flex; /* show hamburger nav */
+    justify-content: space-between;
+    align-items: center;
+    height: 12vh;
+    padding: 0 1.5rem;
+    width: 100%;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
 }

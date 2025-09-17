@@ -1,9 +1,62 @@
 /* FOOTER SECTION */
 footer {
-  height: 26vh;
-  margin: 0 1rem;
+  padding: 2rem 1rem;
+  background: #f9f9f9;
+  border-top: 1px solid #ddd;
+  text-align: center;
+}
+
+/* Nav links inside footer */
+footer .nav-links-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+footer .nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  flex-wrap: wrap; /* allows wrapping on small screens */
+  padding: 0;
+  margin: 0;
+}
+
+footer .nav-links a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.1rem;
+  transition: color 0.2s ease;
+}
+
+footer .nav-links a:hover {
+  color: grey;
 }
 
 footer p {
-  text-align: center;
+  font-size: 0.9rem;
+  color: #555;
+  margin: 0;
+}
+
+/* ======================== */
+/* RESPONSIVE DESIGN BELOW  */
+/* ======================== */
+@media (max-width: 768px) {
+  footer .nav-links {
+    gap: 1rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  footer .nav-links {
+    flex-direction: column; /* stack vertically */
+    gap: 0.5rem;
+  }
+
+  footer p {
+    font-size: 0.8rem;
+    margin-top: 1rem;
+  }
 }
