@@ -17,7 +17,7 @@ function Sidehustles() {
           title: "Just Piano Vibes",
           url: "https://www.youtube.com/@justpianovibes", // Replace with your actual channel URL
           description: ["Self-learned piano journey"],
-          videos: ["hMMxk2U0OqU", "lyyz1FUgk_c"],
+          videos: ["2a9Tj_udZgM", "lyyz1FUgk_c"],
         },
       ],
     },
