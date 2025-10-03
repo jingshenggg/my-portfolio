@@ -35,3 +35,10 @@ article {
 article .icon {
   cursor: default;
 }
+
+.certification-badge img {
+  width: 120px; /* Set a reasonable size for the badge */
+  height: auto;
+  border-radius: 5px; /* Slight round corners for the badge */
+  margin-top: 10px;
+}

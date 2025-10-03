@@ -1,5 +1,5 @@
-import React from "react";
 import "./Experience.css";
+import BadgeIcon from "../assets/badge.png";
 
 function Experience() {
   const experiences = [
@@ -23,6 +23,13 @@ function Experience() {
       company: "NTU Asian School of the Environment",
       period: "2020 – 2023",
     },
+    {
+      role: "Databricks Certified Data Engineer Associate",
+      company: "Databricks",
+      period: "2025 - 2027",
+      certification: true,
+      badge: BadgeIcon,
+    }
   ];
 
   return (
@@ -30,12 +37,26 @@ function Experience() {
       <p className="section__text__p1">Explore My</p>
       <h1 className="title">Work Experience</h1>
       <div className="timeline-container">
-        {experiences.map(({ role, company, period, description }, index) => (
+        {experiences.map(({ role, company, period, certification, badge }, index) => (
           <div key={index} className="timeline-item">
             <div className="timeline-dot"></div>
             <div className="timeline-content">
-              <h3>{company} ({role})</h3>
-              <span className="period">{period}</span>
+              {certification ? (
+                // Display certification differently
+                <div className="certification-item">
+                  <h3>{role} at {company}</h3>
+                  <span className="period">{period}</span>
+                  <div className="certification-badge">
+                    <img src={badge} alt="Databricks Certification Badge" />
+                  </div>
+                </div>
+              ) : (
+                // Normal work experience
+                <>
+                  <h3>{company} ({role})</h3>
+                  <span className="period">{period}</span>
+                </>
+              )}
             </div>
           </div>
         ))}
