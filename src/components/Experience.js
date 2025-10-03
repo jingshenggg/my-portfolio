@@ -25,7 +25,6 @@ function Experience() {
     },
     {
       role: "Databricks Certified Data Engineer Associate",
-      company: "Databricks",
       period: "2025 - 2027",
       certification: true,
       badge: BadgeIcon,
@@ -44,7 +43,7 @@ function Experience() {
               {certification ? (
                 // Display certification differently
                 <div className="certification-item">
-                  <h3>{role} at {company}</h3>
+                  <h3>{role}</h3>
                   <span className="period">{period}</span>
                   <div className="certification-badge">
                     <img src={badge} alt="Databricks Certification Badge" />
