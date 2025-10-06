@@ -1,6 +1,7 @@
 /* EXPERIENCE SECTION */
 #experience {
   position: relative;
+  padding: 2rem 1rem;
 }
 
 .experience-sub-title {
@@ -36,9 +37,57 @@ article .icon {
   cursor: default;
 }
 
+/* Certification Section Adjustments */
+.certification-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  max-width: 650px; /* limit width for better readability */
+  margin-bottom: 2rem;
+}
+
+/* Wrap badge and pdf preview horizontally */
+.certification-badge {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+/* Badge styling */
 .certification-badge img {
   width: 200px; /* Set a reasonable size for the badge */
   height: auto;
   border-radius: 5px; /* Slight round corners for the badge */
   margin-top: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* PDF preview styling */
+.pdf-preview {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  height: 400px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .certification-badge {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .certification-badge img,
+  .pdf-preview {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+  }
+
+  .certification-item {
+    max-width: 100%;
+    align-items: center;
+  }
 }

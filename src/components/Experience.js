@@ -1,5 +1,5 @@
 import "./Experience.css";
-import BadgeIcon from "../assets/badge.png";
+import PDF from "../assets/Databricks Certified Data Engineer Associate.pdf";
 
 function Experience() {
   const workExperiences = [
@@ -29,7 +29,7 @@ function Experience() {
     {
       role: "Databricks Certified Data Engineer Associate",
       period: "2025 - 2027",
-      badge: BadgeIcon,
+      pdf: PDF,
     }
   ];
 
@@ -51,14 +51,20 @@ function Experience() {
 
       <h1 className="title">Certification</h1>
       <div className="timeline-container">
-        {certifications.map(({ role, period, badge }, index) => (
+        {certifications.map(({ role, period, pdf }, index) => (
           <div key={index} className="timeline-item">
             <div className="timeline-dot"></div>
             <div className="timeline-content certification-item">
               <h3>{role}</h3>
               <span className="period">{period}</span>
               <div className="certification-badge">
-                <img src={badge} alt={`${role} Badge`} />
+                <embed
+                  src={pdf}
+                  type="application/pdf"
+                  width="300px"
+                  height="400px"
+                  className="pdf-preview"
+                />
               </div>
             </div>
           </div>
