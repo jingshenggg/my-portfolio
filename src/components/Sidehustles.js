@@ -5,7 +5,6 @@ function Sidehustles() {
   const sidehustles = [
     {
       role: "YouTube Content Creator",
-      period: "2025 - Present",
       projects: [
         {
           title: "Mr. JS",
@@ -28,13 +27,14 @@ function Sidehustles() {
       <p className="section__text__p1">Sharing My</p>
       <h1 className="title">Side Hustles</h1>
       <div className="timeline-container">
-        {sidehustles.map(({ role, period, projects }, index) => (
+        {sidehustles.map(({ role, projects }, index) => (
           <div key={index} className="timeline-item">
             <div className="timeline-dot"></div>
             <div className="timeline-content">
               <h3>{role}</h3>
-              <span className="period">{period}</span>
-
+              <div>During my free time, I love creating travel vlogs and piano videos on YouTube. 
+                Traveling allows me to explore new cultures and landscapes, and I enjoy capturing those moments to share stories that inspire others to see the world through my eyes.
+                On the music side, playing the piano helps me unwind and express creativity in a different way. </div>
               {projects.map((proj, i) => (
                 <div key={i} className="project-block">
                   <h4>
