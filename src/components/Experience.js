@@ -1,4 +1,4 @@
-import "./Experience.css";
+import "../css/Experience.css";
 import PDF from "../assets/Databricks Certified Data Engineer Associate.pdf";
 
 function Experience() {

@@ -1,5 +1,4 @@
-import React from "react";
-import "./Sidehustles.css";
+import "../css/Sidehustles.css";
 
 function Sidehustles() {
   const sidehustles = [

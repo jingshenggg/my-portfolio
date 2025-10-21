@@ -1,5 +1,5 @@
 import React from "react";
-import "./Contact.css";
+import "../css/Contact.css";
 import EmailIcon from "../assets/email.png";
 import LinkedInIcon from "../assets/linkedin.png";
 import YoutubeIcon from "../assets/youtube.png";

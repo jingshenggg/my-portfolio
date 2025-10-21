@@ -1,5 +1,4 @@
-import React from "react";
-import "./About.css";
+import "../css/About.css";
 import ExperienceIcon from "../assets/experience.png";
 import EducationIcon from "../assets/education.png";
 

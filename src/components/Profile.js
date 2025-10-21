@@ -1,5 +1,4 @@
-import React from "react";
-import "./Profile.css";
+import "../css/Profile.css";
 import ProfilePic from "../assets/profile-pic.jpg";
 import LinkedInIcon from "../assets/linkedin.png";
 import GitHubIcon from "../assets/github.png";
