@@ -43,7 +43,7 @@ function About() {
               I began my career as a Full Stack Developer, gaining hands-on experience in building end-to-end applications. 
               Over time, I discovered a deeper passion for data, which led me to specialize as a Data Engineer.
               Today, I focus on designing and building robust ETL pipelines and scalable data systems that efficiently handle both batch and real-time data processing. 
-              My expertise includes managing complex data workflows using Python, SQL, Apache Spark, Databricks, Hadoop, and Hive, as well as integrating real-time streaming technologies like Apache Kafka and Spark Streaming to enable timely data insights. 
+              My expertise includes managing complex data workflows using Python, SQL, Apache Spark, Databricks, Hadoop, and Hive, as well as integrating real-time streaming technologies like Spark Streaming to enable timely data insights. 
               Additionally, I am skilled in database management, optimizing relational and NoSQL databases to ensure data reliability, performance, and accessibility for analytics and business intelligence purposes.
             </p>
           </div>
