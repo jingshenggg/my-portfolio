@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/my-portfolio/static/css/main.24b87565.css",
-    "main.js": "/my-portfolio/static/js/main.57c91934.js",
+    "main.css": "/my-portfolio/static/css/main.8aa1de04.css",
+    "main.js": "/my-portfolio/static/js/main.ab5dc098.js",
     "static/js/453.438d9e50.chunk.js": "/my-portfolio/static/js/453.438d9e50.chunk.js",
     "static/media/Databricks Certified Data Engineer Associate.pdf": "/my-portfolio/static/media/Databricks Certified Data Engineer Associate.465623afa5fb2eb7e1bf.pdf",
     "static/media/profile-pic.jpg": "/my-portfolio/static/media/profile-pic.72d9a63de4ad1ec0ca69.jpg",
@@ -9,12 +9,12 @@
     "static/media/youtube.png": "/my-portfolio/static/media/youtube.f2f39472b5d0fb4c9c81.png",
     "static/media/linkedin.png": "/my-portfolio/static/media/linkedin.032cf8a63be2f0f4d425.png",
     "index.html": "/my-portfolio/index.html",
-    "main.24b87565.css.map": "/my-portfolio/static/css/main.24b87565.css.map",
-    "main.57c91934.js.map": "/my-portfolio/static/js/main.57c91934.js.map",
+    "main.8aa1de04.css.map": "/my-portfolio/static/css/main.8aa1de04.css.map",
+    "main.ab5dc098.js.map": "/my-portfolio/static/js/main.ab5dc098.js.map",
     "453.438d9e50.chunk.js.map": "/my-portfolio/static/js/453.438d9e50.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.24b87565.css",
-    "static/js/main.57c91934.js"
+    "static/css/main.8aa1de04.css",
+    "static/js/main.ab5dc098.js"
   ]
 }
