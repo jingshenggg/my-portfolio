@@ -3,12 +3,37 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 3rem 1rem;
-  background: #f9f9f9;
+  padding: 5rem 1rem;
+  background: linear-gradient(to bottom, #f9f9f9, #ffffff);
+  min-height: 60vh;
+}
+
+.section-fade {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.section-fade.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 #contact .title {
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+#contact .title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: #333;
+  border-radius: 2px;
 }
 
 .contact-info-upper-container {
@@ -26,71 +51,144 @@
   align-items: center;
   background: white;
   border-radius: 1.5rem;
-  padding: 1.5rem 2rem;
-  min-width: 200px;
-  flex: 1 1 200px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 2rem;
+  min-width: 220px;
+  flex: 1 1 220px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-info-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #007bff, #00bcd4);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
 }
 
 .contact-info-container:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.contact-info-container:hover::before {
+  transform: scaleX(1);
+}
+
+.icon-wrapper {
+  background: #f8f9fa;
+  padding: 1rem;
+  border-radius: 50%;
+  margin-bottom: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.contact-info-container:hover .icon-wrapper {
+  transform: scale(1.1);
 }
 
 .contact-info-container img {
-  width: 50px;
-  height: 50px;
-  margin-bottom: 1rem;
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease;
 }
 
 .contact-info-container p {
   margin: 0;
   font-size: 1.1rem;
+  line-height: 1.5;
 }
 
 .contact-info-container a {
   text-decoration: none;
   color: #333;
   font-weight: 500;
-  transition: color 0.2s;
+  transition: all 0.3s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
 }
 
 .contact-info-container a:hover {
-  color: #0073b1; /* e.g., LinkedIn blue for all links hover */
+  color: #007bff;
+  background: #f8f9fa;
+}
+
+.contact-message {
+  text-align: center;
+  margin-top: 3rem;
+  padding: 2rem;
+  max-width: 600px;
+  color: #666;
+}
+
+.contact-message p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  opacity: 0.9;
 }
 
 /* ======= MOBILE RESPONSIVE ======= */
 @media (max-width: 768px) {
+  #contact {
+    padding: 4rem 1rem;
+  }
+
   .contact-info-upper-container {
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
+    gap: 1.5rem;
   }
 
   .contact-info-container {
-    width: auto;         /* let box size to content */
-    min-width: 150px;    /* prevent it from being too small */
-    max-width: 220px;    /* cap maximum width */
-    margin: 0 auto;      /* center the box */
+    width: 100%;
+    max-width: 280px;
+    padding: 1.5rem;
+    margin: 0 auto;
+  }
+
+  .contact-message {
+    margin-top: 2rem;
+    padding: 1rem;
   }
 }
 
 @media (max-width: 480px) {
+  #contact {
+    padding: 3rem 1rem;
+  }
+
   .contact-info-container {
-    padding: 0.5rem 1rem;  /* smaller padding */
-    min-width: 140px;       /* slightly smaller on tiny screens */
-    max-width: 200px;       /* cap width for small phones */
+    padding: 1.25rem;
+    max-width: 240px;
+  }
+
+  .icon-wrapper {
+    padding: 0.75rem;
   }
 
   .contact-info-container img {
-    width: 30px;
-    height: 30px;
+    width: 32px;
+    height: 32px;
   }
 
   .contact-info-container p {
-    font-size: 0.9rem;
+    font-size: 1rem;
+  }
+
+  .contact-message p {
+    font-size: 1rem;
+  }
+
+  #contact .title::after {
+    width: 40px;
   }
 }
 

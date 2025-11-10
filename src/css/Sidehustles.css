@@ -1,49 +1,137 @@
 #sidehustles {
   position: relative;
+  padding: 4rem 2rem;
+  background: #fafafa;
 }
 
-.sidehustles-sub-title {
-  color: rgb(85, 85, 85);
-  font-weight: 600;
-  font-size: 1.75rem;
-  margin-bottom: 2rem;
+.content-container {
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
-.sidehustles-details-container {
+.content-section {
+  margin-bottom: 4rem;
+}
+
+.intro-section {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+}
+
+.role-title {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.description {
+  color: #666;
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+.projects-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.project-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-header {
+  padding: 1.5rem;
+}
+
+.project-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.channel-link {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.channel-link:hover {
+  color: #0066cc;
+}
+
+.project-tags {
+  list-style: none;
+  padding: 0;
   display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.article-container {
-  display: flex;
-  text-align: initial;
-  flex-wrap: wrap;
-  flex-direction: row;
-  gap: 2.5rem;
-  justify-content: space-around;
-}
-
-article {
-  display: flex;
-  width: 10rem;
-  justify-content: space-around;
   gap: 0.5rem;
-}
-
-article .icon {
-  cursor: default;
-}
-
-.video-container {
-  margin-top: 1rem;
-  display: flex;
-  justify-content: center; /* center horizontally */
-  gap: 1rem; /* spacing between multiple videos */
   flex-wrap: wrap;
 }
 
-.video-container iframe {
-  border-radius: 8px;
+.tag {
+  background: #f0f0f0;
+  padding: 0.3rem 0.8rem;
+  border-radius: 1rem;
+  font-size: 0.9rem;
+  color: #666;
 }
 
+.video-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  height: 0;
+  overflow: hidden;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #sidehustles {
+    padding: 3rem 1rem;
+  }
+
+  .role-title {
+    font-size: 1.75rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+  .project-title {
+    font-size: 1.25rem;
+  }
+
+  .projects-grid {
+    gap: 1.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .video-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

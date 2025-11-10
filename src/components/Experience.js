@@ -1,7 +1,29 @@
+import { useState, useEffect } from "react";
 import "../css/Experience.css";
 import PDF from "../assets/Databricks Certified Data Engineer Associate.pdf";
 
 function Experience() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(entry.target);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    const section = document.getElementById("experience");
+    if (section) observer.observe(section);
+
+    return () => {
+      if (section) observer.unobserve(section);
+    };
+  }, []);
+
   const workExperiences = [
     {
       role: "Data Engineer",
@@ -34,41 +56,56 @@ function Experience() {
   ];
 
   return (
-    <section id="experience">
-      <p className="section__text__p1">Explore My</p>
-      <h1 className="title">Work Experience</h1>
-      <div className="timeline-container">
-        {workExperiences.map(({ role, company, period }, index) => (
-          <div key={index} className="timeline-item">
-            <div className="timeline-dot"></div>
-            <div className="timeline-content">
-              <h3>{company} ({role})</h3>
-              <span className="period">{period}</span>
+    <section id="experience" className={`section-fade ${isVisible ? 'visible' : ''}`}>
+      <div className="section-content">
+        <p className="section__text__p1" aria-hidden="true">Explore My</p>
+        <h1 className="title">Work Experience</h1>
+        <div className="timeline-container">
+          {workExperiences.map(({ role, company, period }, index) => (
+            <div 
+              key={index} 
+              className="timeline-item"
+              data-aos="fade-up"
+              data-aos-delay={index * 100}
+            >
+              <div className="timeline-dot"></div>
+              <div className="timeline-content">
+                <div className="timeline-header">
+                  <h3>{company}</h3>
+                  <span className="period">{period}</span>
+                </div>
+                <div className="role">{role}</div>
+              </div>
             </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
 
-      <h1 className="title">Certification</h1>
-      <div className="timeline-container">
-        {certifications.map(({ role, period, pdf }, index) => (
-          <div key={index} className="timeline-item">
-            <div className="timeline-dot"></div>
-            <div className="timeline-content certification-item">
-              <h3>{role}</h3>
-              <span className="period">{period}</span>
+        <h2 className="title certifications-title">Professional Certifications</h2>
+        <div className="certifications-container">
+          {certifications.map(({ role, period, pdf }, index) => (
+            <div 
+              key={index} 
+              className="certification-item"
+              data-aos="fade-up"
+              data-aos-delay={index * 100}
+            >
+              <div className="certification-header">
+                <h3>{role}</h3>
+                <span className="period">{period}</span>
+              </div>
               <div className="certification-badge">
                 <embed
                   src={pdf}
                   type="application/pdf"
-                  width="300px"
+                  width="100%"
                   height="400px"
                   className="pdf-preview"
+                  title={role}
                 />
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );

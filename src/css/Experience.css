@@ -1,93 +1,220 @@
 /* EXPERIENCE SECTION */
 #experience {
   position: relative;
-  padding: 2rem 1rem;
+  padding: 4rem 2rem;
+  background: #fafafa;
 }
 
-.experience-sub-title {
-  color: rgb(85, 85, 85);
-  font-weight: 600;
-  font-size: 1.75rem;
-  margin-bottom: 2rem;
+.section-fade {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-.experience-details-container {
+.section-fade.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.certifications-title {
+  margin-top: 4rem;
+}
+
+.timeline-container {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.timeline-container::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
+  background: #ddd;
+  z-index: 0;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 3rem;
+  width: 100%;
   display: flex;
   justify-content: center;
-  flex-direction: column;
 }
 
-.article-container {
-  display: flex;
-  text-align: initial;
-  flex-wrap: wrap;
-  flex-direction: row;
-  gap: 2.5rem;
-  justify-content: space-around;
+.timeline-dot {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 15px;
+  height: 15px;
+  background: #fff;
+  border: 2px solid #333;
+  border-radius: 50%;
+  z-index: 1;
 }
 
-article {
-  display: flex;
-  width: 10rem;
-  justify-content: space-around;
-  gap: 0.5rem;
-}
-
-article .icon {
-  cursor: default;
-}
-
-/* Certification Section Adjustments */
-.certification-item {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 1rem;
-  max-width: 650px; /* limit width for better readability */
-  margin-bottom: 2rem;
-}
-
-/* Wrap badge and pdf preview horizontally */
-.certification-badge {
-  display: flex;
-  gap: 20px;
-  align-items: flex-start;
-}
-
-/* Badge styling */
-.certification-badge img {
-  width: 200px; /* Set a reasonable size for the badge */
-  height: auto;
-  border-radius: 5px; /* Slight round corners for the badge */
-  margin-top: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* PDF preview styling */
-.pdf-preview {
-  border: 1px solid #ccc;
+.timeline-content {
+  width: 45%;
+  padding: 1.5rem;
+  background: white;
   border-radius: 8px;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-  width: 300px;
-  height: 400px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Responsive tweaks */
-@media (max-width: 768px) {
-  .certification-badge {
-    flex-direction: column;
-    align-items: center;
+.timeline-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+  margin-right: auto;
+  margin-left: 0;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.timeline-header {
+  margin-bottom: 1rem;
+}
+
+.timeline-header h3 {
+  font-size: 1.25rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.role {
+  color: #666;
+  font-weight: 500;
+}
+
+.period {
+  display: inline-block;
+  font-size: 0.9rem;
+  color: #888;
+  margin-top: 0.5rem;
+}
+
+/* Certifications Section */
+.certifications-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.certification-item {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certification-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.certification-header {
+  margin-bottom: 1.5rem;
+}
+
+.certification-header h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.certification-badge {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.pdf-preview {
+  border: 1px solid #eee;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background: white;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .timeline-container::before {
+    left: 30px;
   }
 
-  .certification-badge img,
-  .pdf-preview {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
+  .timeline-content {
+    width: calc(100% - 60px);
+    margin-left: 60px !important;
+  }
+
+  .timeline-dot {
+    left: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  #experience {
+    padding: 3rem 1rem;
+  }
+
+  .title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .timeline-content {
+    padding: 1rem;
   }
 
   .certification-item {
-    max-width: 100%;
-    align-items: center;
+    padding: 1.5rem;
+  }
+
+  .certification-header h3 {
+    font-size: 1.25rem;
+  }
+
+  .pdf-preview {
+    height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .timeline-content {
+    width: calc(100% - 45px);
+    margin-left: 45px !important;
+  }
+
+  .timeline-container::before {
+    left: 20px;
+  }
+
+  .timeline-dot {
+    left: 20px;
+    width: 12px;
+    height: 12px;
   }
 }

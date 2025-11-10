@@ -25,44 +25,50 @@ function Sidehustles() {
     <section id="sidehustles">
       <p className="section__text__p1">Sharing My</p>
       <h1 className="title">Side Hustles</h1>
-      <div className="timeline-container">
+      <div className="content-container">
         {sidehustles.map(({ role, projects }, index) => (
-          <div key={index} className="timeline-item">
-            <div className="timeline-dot"></div>
-            <div className="timeline-content">
-              <h3>{role}</h3>
-              <div>During my free time, I love creating travel vlogs and piano videos on YouTube. 
+          <div key={index} className="content-section">
+            <div className="intro-section">
+              <h2 className="role-title">{role}</h2>
+              <p className="description">
+                During my free time, I love creating travel vlogs and piano videos on YouTube. 
                 Traveling allows me to explore new cultures and landscapes, and I enjoy capturing those moments to share stories that inspire others to see the world through my eyes.
-                On the music side, playing the piano helps me unwind and express creativity in a different way. </div>
+                On the music side, playing the piano helps me unwind and express creativity in a different way.
+              </p>
+            </div>
+            
+            <div className="projects-grid">
               {projects.map((proj, i) => (
-                <div key={i} className="project-block">
-                  <h4>
-                    <a
-                      href={proj.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {proj.title}
-                    </a>
-                  </h4>
-                  <ul>
-                    {proj.description.map((item, j) => (
-                      <li key={j}>{item}</li>
-                    ))}
-                  </ul>
+                <div key={i} className="project-card">
+                  <div className="project-header">
+                    <h3 className="project-title">
+                      <a
+                        href={proj.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="channel-link"
+                      >
+                        {proj.title}
+                      </a>
+                    </h3>
+                    <ul className="project-tags">
+                      {proj.description.map((item, j) => (
+                        <li key={j} className="tag">{item}</li>
+                      ))}
+                    </ul>
+                  </div>
 
                   {proj.videos.length > 0 && (
-                    <div className="video-container">
+                    <div className="video-grid">
                       {proj.videos.map((videoId, k) => (
-                        <iframe
-                          key={k}
-                          width="640"
-                          height="360"
-                          src={`https://www.youtube.com/embed/${videoId}`}
-                          title={`YouTube video ${k}`}
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                          allowFullScreen
-                        ></iframe>
+                        <div key={k} className="video-wrapper">
+                          <iframe
+                            src={`https://www.youtube.com/embed/${videoId}`}
+                            title={`${proj.title} video ${k + 1}`}
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen
+                          ></iframe>
+                        </div>
                       ))}
                     </div>
                   )}

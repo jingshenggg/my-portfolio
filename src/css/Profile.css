@@ -5,8 +5,20 @@
   align-items: center;
   gap: 5rem;
   padding: 2rem;
-  height: auto; /* let content decide height */
-  min-height: 80vh;
+  height: auto;
+  min-height: 90vh;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+/* Fade in animation */
+#profile.fade-in {
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+#profile.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .section__pic-container {
@@ -47,17 +59,50 @@
   text-align: center;
 }
 
-#socials-container {
+.socials-container {
   display: flex;
   justify-content: center;
-  margin-top: 1rem;
-  gap: 1rem;
+  margin-top: 1.5rem;
+  gap: 1.5rem;
 }
 
 /* ICONS */
+.social-link {
+  display: inline-block;
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.social-link::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  opacity: 0;
+  transform: scale(1.2);
+  transition: all 0.3s ease;
+}
+
+.social-link:hover {
+  transform: translateY(-3px);
+}
+
+.social-link:hover::after {
+  opacity: 1;
+  transform: scale(1);
+}
+
 .icon {
-  cursor: pointer;
   height: 2rem;
+  width: 2rem;
+  object-fit: contain;
+  transition: filter 0.3s ease;
+}
+
+.social-link:hover .icon {
+  filter: brightness(1.2);
 }
 
 /* BUTTONS */
@@ -70,10 +115,15 @@
 
 .btn {
   font-weight: 600;
-  transition: all 300ms ease;
+  transition: all 0.3s ease;
   padding: 1rem;
   width: 8rem;
   border-radius: 2rem;
+  text-decoration: none;
+  color: rgb(53, 53, 53);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
 }
 
 .btn-color-1 {
@@ -81,11 +131,25 @@
   background: none;
 }
 
-.btn-color-1:hover {
+.btn-color-1::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
   background: rgb(53, 53, 53);
+  transition: width 0.3s ease;
+  z-index: -1;
+}
+
+.btn-color-1:hover {
   color: white;
   cursor: pointer;
-  border: rgb(255, 255, 255) 0.1rem solid;
+}
+
+.btn-color-1:hover::before {
+  width: 100%;
 }
 
 /* ======================== */

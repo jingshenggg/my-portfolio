@@ -1,64 +1,89 @@
+import { useEffect, useState } from "react";
 import "../css/Profile.css";
 import ProfilePic from "../assets/profile-pic.jpg";
 import LinkedInIcon from "../assets/linkedin.png";
 import GitHubIcon from "../assets/github.png";
 import YoutubeIcon from "../assets/youtube.png";
 
+const socialLinks = [
+  {
+    name: "LinkedIn",
+    icon: LinkedInIcon,
+    url: "https://www.linkedin.com/in/jingshenggg/",
+  },
+  {
+    name: "GitHub",
+    icon: GitHubIcon,
+    url: "https://github.com/jingshenggg",
+  },
+  {
+    name: "YouTube",
+    icon: YoutubeIcon,
+    url: "https://www.youtube.com/@hellothisisjs",
+  },
+];
+
 function Profile() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
   return (
-    <section id="profile">
-      <div className="section__pic-container">
-        <img src={ProfilePic} alt="Jing Sheng profile" />
+    <section id="profile" className={`fade-in ${isVisible ? 'visible' : ''}`}>
+      <div className="section__pic-container" aria-hidden="true">
+        <img 
+          src={ProfilePic} 
+          alt="Jing Sheng profile" 
+          className="profile-image"
+          loading="eager"
+        />
       </div>
       <div className="section__text">
         <p className="section__text__p1">Hello, I am</p>
         <h1 className="title">Jing Sheng</h1>
-        <p className="section__text__p2">Welcome to my profile 😄</p>
-        <div className="btn-container">
-          <button
+        <p className="section__text__p2">Data Engineer & Content Creator</p>
+        <div className="btn-container" role="group" aria-label="Navigation buttons">
+          <a 
+            href="#experience"
             className="btn btn-color-1"
-            onClick={() => window.location.href="#experience"}
           >
             Work Experience
-          </button>
-          <button
+          </a>
+          <a 
+            href="#sidehustles"
             className="btn btn-color-1"
-            onClick={() => window.location.href="#sidehustles"}
           >
             Side Hustles
-          </button>
-          <button
+          </a>
+          <a 
+            href="#contact"
             className="btn btn-color-1"
-            onClick={() => window.location.href="#contact"}
           >
             Contact Info
-          </button>
+          </a>
         </div>
-        <div id="socials-container">
-          <img
-            src={LinkedInIcon}
-            alt="LinkedIn"
-            className="icon"
-            onClick={() =>
-              window.open("https://www.linkedin.com/in/jingshenggg/", "_blank")
-            }
-          />
-          <img
-            src={GitHubIcon}
-            alt="GitHub"
-            className="icon"
-            onClick={() =>
-              window.open("https://github.com/jingshenggg", "_blank")
-            }
-          />
-          <img
-            src={YoutubeIcon}
-            alt="Youtube"
-            className="icon"
-            onClick={() =>
-              window.open("https://www.youtube.com/@hellothisisjs", "_blank")
-            }
-          />
+        <div 
+          className="socials-container"
+          role="group" 
+          aria-label="Social media links"
+        >
+          {socialLinks.map((social) => (
+            <a
+              key={social.name}
+              href={social.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`Visit my ${social.name} profile`}
+              className="social-link"
+            >
+              <img
+                src={social.icon}
+                alt={`${social.name} icon`}
+                className="icon"
+              />
+            </a>
+          ))}
         </div>
       </div>
     </section>
