@@ -7,12 +7,17 @@ const aboutData = {
   experience: {
     title: "Experience",
     icon: ExperienceIcon,
-    description: "More than 2 years\nSoftware Development & Data Engineering"
+    description: ["More than 2 years", "Software Development & Data Engineering"]
   },
   education: {
     title: "Education",
     icon: EducationIcon,
-    description: "Nanyang Technological University 2019 - 2023\nBachelor of Engineering (Electrical & Electronic Engineering)\nwith Honours (Distinction)\nSpecialization: Computer Engineering"
+    description: [
+      "Nanyang Technological University 2019 - 2023",
+      "Bachelor of Engineering (Electrical & Electronic Engineering)",
+      "with Honours (Distinction)",
+      "Specialization: Computer Engineering"
+    ]
   }
 };
 
@@ -63,10 +68,10 @@ function About() {
                 />
                 <h3>{data.title}</h3>
                 <p>
-                  {data.description.split('\\n').map((line, i) => (
+                  {data.description.map((line, i) => (
                     <span key={i}>
                       {line}
-                      <br />
+                      {i < data.description.length - 1 && <br />}
                     </span>
                   ))}
                 </p>
