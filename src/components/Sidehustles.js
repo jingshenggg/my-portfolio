@@ -9,7 +9,7 @@ function Sidehustles() {
           title: "Mr. JS",
           url: "https://www.youtube.com/@hellothisisjs", // Replace with your actual channel URL
           description: ["Travel vlogs"],
-          videos: ["qA4seXB4Exw", "nP1D96R2XGk"],
+          videos: ["qA4seXB4Exw", "6x44Rg6cOpw"],
         },
         {
           title: "Just Piano Vibes",
