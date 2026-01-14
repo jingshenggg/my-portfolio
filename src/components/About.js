@@ -100,13 +100,22 @@ function About() {
               <h3>Tech Stack</h3>
               <div className="skills-grid">
                 <span className="skill-tag">Python</span>
+                <span className="skill-tag">C#</span>
                 <span className="skill-tag">SQL</span>
+                <span className="skill-tag">Cypher</span>
+                <span className="skill-tag">Dart</span>
                 <span className="skill-tag">Apache Spark</span>
                 <span className="skill-tag">Databricks</span>
                 <span className="skill-tag">Hadoop</span>
                 <span className="skill-tag">Hive</span>
                 <span className="skill-tag">ETL</span>
+                <span className="skill-tag">Kafka</span>
+                <span className="skill-tag">Neo4j</span>
+                <span className="skill-tag">Flutter</span>
+                <span className="skill-tag">Knowledge Graphs</span>
                 <span className="skill-tag">Data Engineering</span>
+                <span className="skill-tag">Web App Development</span>
+                <span className="skill-tag">Mobile App Development</span>
               </div>
             </div>
           </div>
