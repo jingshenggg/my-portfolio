@@ -79,21 +79,30 @@ function About() {
             ))}
           </div>
           <div className="text-container" data-aos="fade-up" data-aos-delay="400">
-            <p>
-              Welcome to my profile! I graduated from Nanyang Technological University (NTU) with a degree in Electrical & Electronic Engineering, specializing in Computer Engineering. 
-              This gave me a strong foundation in both software development and system-level problem solving.
-            </p>
-            <p>
-              I began my career as a Full Stack Developer, gaining hands-on experience in building end-to-end applications. 
-              Over time, I discovered a deeper passion for data, which led me to specialize as a Data Engineer.
-            </p>
+              <p>
+                Welcome to my profile! I graduated from Nanyang Technological University (NTU) with a degree in Electrical & Electronic Engineering, specializing in Computer Engineering. 
+                This provided me with a strong foundation in both software development and system-level problem solving.
+              </p>
+              <p>
+                During my university years, I developed a mental health mobile application with my team as my Final Year Project, where I applied software engineering principles to solve real-world problems. 
+                I also participated in the Microsoft Imagine Cup competition, gaining exposure to innovation-driven development and collaborative problem solving.
+              </p>
+              <p>
+                I began my career as a Full Stack Developer, gaining hands-on experience in building end-to-end applications. 
+                Over time, I discovered a deeper passion for data, which led me to specialize as a Data Engineer.
+              </p>
             <p>
               Today, I focus on:
               <ul>
-                <li>Designing and building robust ETL pipelines and scalable data systems</li>
+                <li>Designing and building robust ETL pipelines and scalable data platforms</li>
+                <li>Developing end-to-end ETL pipelines from PostgreSQL to Knowledge Graphs</li>
+                <li>Designing and implementing event-driven Knowledge Graphs using Kafka and Neo4j</li>
+                <li>Building Kafka pipelines (PostgreSQL → Kafka → Neo4j) for real-time data ingestion</li>
+                <li>Building Medallion Architecture (Bronze, Silver, Gold) using Databricks and Pyspark</li>
                 <li>Managing complex data workflows using Python, SQL, and modern data tools</li>
-                <li>Integrating real-time streaming technologies for timely insights</li>
-                <li>Optimizing database performance and accessibility</li>
+                <li>Integrating real-time and near real-time streaming technologies for timely insights</li>
+                <li>Performing data modeling and schema design following normalization principles</li>
+                <li>Optimizing database performance, reliability, and accessibility</li>
               </ul>
             </p>
             <div className="skills-container">
@@ -110,6 +119,7 @@ function About() {
                 <span className="skill-tag">Hive</span>
                 <span className="skill-tag">ETL</span>
                 <span className="skill-tag">Kafka</span>
+                <span className="skill-tag">InfluxDB</span>
                 <span className="skill-tag">Neo4j</span>
                 <span className="skill-tag">Flutter</span>
                 <span className="skill-tag">Knowledge Graphs</span>
