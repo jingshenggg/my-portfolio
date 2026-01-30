@@ -15,7 +15,7 @@
 
 .intro-section {
   text-align: center;
-  max-width: 800px;
+  max-width: flex;
   margin: 0 auto 3rem;
 }
 
