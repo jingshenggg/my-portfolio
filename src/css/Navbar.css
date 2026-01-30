@@ -81,11 +81,15 @@ a.active {
 }
 
 .logo {
-  font-size: 2rem;
+  background-color: transparent;
+  border: none;
+  list-style: none;
+  font-size: 1.8rem;
 }
 
 .logo:hover {
   cursor: default;
+  color: grey;
 }
 
 /* ======================== */

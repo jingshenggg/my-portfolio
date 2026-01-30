@@ -11,7 +11,12 @@ const menuItems = [
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("");
-
+    const handleScrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  };
   const toggleMenu = useCallback(() => setIsOpen(!isOpen), [isOpen]);
 
   // Close menu when clicking outside
@@ -51,7 +56,8 @@ function Navbar() {
       
       {/* Desktop Nav */}
       <nav id="desktop-nav" role="navigation" aria-label="Main navigation">
-        <div className="logo" aria-label="Jing Sheng">Jing Sheng</div>
+        {/* <div className="logo" aria-label="Jing Sheng">Jing Sheng</div> */}
+        <button className="logo" onClick={handleScrollToTop} aria-label="Jing Sheng">Jing Sheng</button>
         <ul className="nav-links">
           {menuItems.map(({ href, label }) => (
             <li key={href}>
