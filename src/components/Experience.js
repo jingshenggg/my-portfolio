@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import "../css/Experience.css";
-import PDF from "../assets/Databricks Certified Data Engineer Associate.pdf";
+import associate from "../assets/Databricks Certified Data Engineer Associate.pdf";
+import professional from "../assets/Databricks Certified Data Engineer Professional.pdf";
 
 function Experience() {
   const [isVisible, setIsVisible] = useState(false);
@@ -13,7 +14,7 @@ function Experience() {
           observer.unobserve(entry.target);
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
 
     const section = document.getElementById("experience");
@@ -44,26 +45,36 @@ function Experience() {
       role: "Part-time IT Assistant/Administrator",
       company: "NTU Asian School of the Environment",
       period: "2020 – 2023",
-    }
+    },
   ];
 
   const certifications = [
     {
+      role: "Databricks Certified Data Engineer Professional",
+      period: "2026 - 2028",
+      pdf: professional,
+    },
+    {
       role: "Databricks Certified Data Engineer Associate",
       period: "2025 - 2027",
-      pdf: PDF,
-    }
+      pdf: associate,
+    },
   ];
 
   return (
-    <section id="experience" className={`section-fade ${isVisible ? 'visible' : ''}`}>
+    <section
+      id="experience"
+      className={`section-fade ${isVisible ? "visible" : ""}`}
+    >
       <div className="section-content">
-        <p className="section__text__p1" aria-hidden="true">Explore My</p>
+        <p className="section__text__p1" aria-hidden="true">
+          Explore My
+        </p>
         <h1 className="title">Work Experience</h1>
         <div className="timeline-container">
           {workExperiences.map(({ role, company, period }, index) => (
-            <div 
-              key={index} 
+            <div
+              key={index}
               className="timeline-item"
               data-aos="fade-up"
               data-aos-delay={index * 100}
@@ -80,11 +91,13 @@ function Experience() {
           ))}
         </div>
 
-        <h2 className="title certifications-title">Professional Certifications</h2>
+        <h2 className="title certifications-title">
+          Professional Certifications
+        </h2>
         <div className="certifications-container">
           {certifications.map(({ role, period, pdf }, index) => (
-            <div 
-              key={index} 
+            <div
+              key={index}
               className="certification-item"
               data-aos="fade-up"
               data-aos-delay={index * 100}
